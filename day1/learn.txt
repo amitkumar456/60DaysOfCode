@@ -1,0 +1,82 @@
+#key learn ponts
+****************************************************************
+1.Max_sum_path_in_two_array
+
+- Array is already sorted. so there can use of (two poniter algo or bineary search).
+- main idea behind this question is two pointer algo
+
+- if ar1[i] is smaller than ar2[j]
+  then we sill add ar1[i] in sum1 and increase the i++
+
+- if ar2[j] is smaller than ar1[i] 
+  then we will add ar2[j] in sum2 and increase the j++
+
+- if ar1[i] is equal to ar2[j]
+  then we will compare add max(sum1,sum2) into result
+  and sum1=0 && sum2=0
+
+
+time complexity--O(M+N) because we are using pointer for traversal till end of array.
+space complexity--O(1)  because no extra space is used.
+
+
+
+****************************************************************
+2.Remove duplicates in small prime array
+
+-brute force approach 1
+ the basic idea is to check for every element, whether it has occurre previously or not.
+ this approach involes 2 for loops.one to select present element and inner loop to check if the element has previously occurred or not
+
+ t.c. O(n^2) s.c. o(n)
+
+ v.erase(v.begin()+res_ind,v.end()) <-- used to erase the vector from res_ind to n;
+
+
+--approach 2
+ using sorting and then removing duplicates elements
+ t.c. o(nlogn) s.c.(n)
+
+ unique(v.begin(),v.end()) <-- put all unique elements at the beginning and return iterator pointing to the first element after the unique element.
+ erase(v.begin()+index,v.end()) <-- to erase the vector from index to end;
+
+ --extra space can be cleverly aboided keeping two vaiables first=1 and i=1.
+
+
+--approach 3
+ using hashing involves t.c. o(n) time.space complexity will take a toll.
+ 
+ unordered_set<int> s(vect.begin(),vect.end()) <-- creating a hash set of vector
+
+ vect.assign(s.begin(),s.end()) <-- assigning value of hash set to vector
+
+--approach 4
+ this focuses on small value where the time complexity is o(n)
+ this will work if and only if product of all distict prime is fewer than 10^18 that is long long data type.
+ property of primes of having no divisior or that number itself is used to arrive at the solution.
+ we will keep product of values till previously element of array.so if the element divides the product, they can be sure proved that the element has prviously occurred in the array.
+
+
+**********************************************************************
+Max sum in the configuration
+
+
+--approach 1
+  brute force t.c. o(n^2) and s.c. o(1)
+  in this approach we are using two for loop
+  1st for loop for rotation of the array and inner loop is for calculating sum
+
+--approach 2
+  one optimization we can do if we find technique to find rotational array sum
+  t.c. o(n) and s.c. o(1)
+  so next sum can be calculated previous sum using following relation
+  next_sum=curr_sum-(cumm_sum-arr[i-1])+(n-1)*arr[i-1]
+
+--approach 3
+  this approach particularly work only for sorted array or sorted rotational array
+  so we know if we are given sorted array then max sum occur when it's in ascending order
+  so we first calculating the pivot(i.e. smallest element in array) using arr[i]>arr[(i+1)%n].
+  after that we just multiplying pivot with 0 and next with 1...............
+
+
+****happy learning....
