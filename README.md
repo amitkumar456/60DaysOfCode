@@ -13,7 +13,6 @@
 [Learning](day1/learn.txt)
 
 
-=======
 ## Day 2
   
 ### problem solved
