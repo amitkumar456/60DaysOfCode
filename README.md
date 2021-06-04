@@ -22,6 +22,8 @@
 3. [Mountain Subarray Problem](https://practice.geeksforgeeks.org/problems/mountain-subarray-problem/0/?track=amazon-arrays&batchId=192)
 4. [Wave Array](https://practice.geeksforgeeks.org/problems/wave-array-1587115621/1/?track=amazon-arrays&batchId=192)
 5. [Equilibrium Point](https://practice.geeksforgeeks.org/problems/equilibrium-point-1587115620/0/?track=amazon-arrays&batchId=192)
+
+
 [learning](Day2/learn.txt)
 
 
