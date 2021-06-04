@@ -13,7 +13,6 @@
 [Learning](day1/learn.txt)
 
 
-<<<<<<< HEAD
 =======
 ## Day 2
   
