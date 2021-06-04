@@ -41,7 +41,47 @@
    - basic idea is to make constant time operation for each queary
    - so we are making two extra spaces of length same as original array.
    - left space contain last index on the left side(i.e. we have to use right range here) to calculate the first increasing element.
-   - right space contain first index on the right so (i.e. we have to use left range for calculation of first decreasment )           
+   - right space contain first index on the right so (i.e. we have to use left range for calculation of first decreasment )          
+
+
+*******************************************************************
+4. Wave array
+
+  -- approach 1
+    - basic idea is to first sort the array and then swap adjacent array
+    - t.c. o(nlogn) s.c. o(1)
+  -- approach 2
+    - basic idea is to use property at the value at even index is greater than close odd position
+    - t.c. o(n) s.c.(1)
+
+******************************************************************
+5. Equilibrium point
+
+ --approach 1
+   -brute forcee using two for loops
+   -t.c. o(n^2) s.c. o(1)
+   -outer loop for picking element inner 2loop for calculating left sum and right sum
+
+  --approach 2
+   -t.c. o(n) s.c. o(1)
+   -first we are calculating the sum of whole array
+   -then we are loop into array subtracting arr[i] into sum and calculating sum till arr[i]
+   -if they both equal we will return 
+
+   --approach 3
+    -t.c. o(n) s.c. o(n)
+    -using prefixsum and suffixsum
+    -then loop through array and comparing prefixsum with suffixsum
+
+   --approach 4
+    -t.c. o(n) s.c. o(1)
+    -using two pointer algorighm
+    -first pointer starting and second pointer end of array
+    -if left sum greater than right we will increament first pointer
+    -if right sum greater than left we will decrement  second pointer 
+    -finally we catch left sum is equal to right sum and i==j
+
+**************************************************************************************
 
 
 
