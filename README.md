@@ -11,3 +11,5 @@
 3. [Max sum in the configuration](https://practice.geeksforgeeks.org/problems/max-sum-in-the-configuration/1/?track=amazon-arrays&batchId=192)
 
 [Learning](day1/learn.txt)
+
+
