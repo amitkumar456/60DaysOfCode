@@ -25,5 +25,5 @@
 4. [Wave Array](https://practice.geeksforgeeks.org/problems/wave-array-1587115621/1/?track=amazon-arrays&batchId=192)
 5. [Equilibrium Point](https://practice.geeksforgeeks.org/problems/equilibrium-point-1587115620/0/?track=amazon-arrays&batchId=192)
 [learning](Day2/learn.txt)
->>>>>>> 29d4938f8509cc700503951c83a43ddbf5a8ebe8
+
 
