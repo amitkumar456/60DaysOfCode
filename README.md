@@ -26,4 +26,17 @@
 
 [learning](Day2/learn.txt)
 
+## Day3
+
+### prolbem solved
+
+1. [Stickler Thief DP](https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/0/?track=amazon-arrays&batchId=192)
+2. [Product array puzzle](https://practice.geeksforgeeks.org/problems/product-array-puzzle4525/0/?track=amazon-arrays&batchId=192)
+3. [Maximum Index](https://practice.geeksforgeeks.org/problems/maximum-index-1587115620/1/?track=amazon-arrays&batchId=192)
+
+
+[learning](Day3/learn.txt)
+
+
+
 
