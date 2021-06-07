@@ -4,7 +4,7 @@
 
 ## Day 1
 
-### problem solved
+### Problem solved
 
 1. [Max sum path in two array](https://practice.geeksforgeeks.org/problems/max-sum-path-in-two-arrays/1/?track=amazon-arrays&batchId=192)
 2. [Remove deuplicates in small prime array](https://practice.geeksforgeeks.org/problems/remove-duplicates-in-small-prime-array/1/?track=amazon-arrays&batchId=192)
@@ -15,7 +15,7 @@
 
 ## Day 2
   
-### problem solved
+### Problem solved
 
 1. [Sorted subsequence of size 3 ](https://practice.geeksforgeeks.org/problems/sorted-subsequence-of-size-3/0/?track=amazon-arrays&batchId=192)
 2. [Find duplicates in an array ](https://practice.geeksforgeeks.org/problems/find-duplicates-in-an-array/0/?track=amazon-arrays&batchId=192)
@@ -28,7 +28,7 @@
 
 ## Day3
 
-### prolbem solved
+### Prolbem solved
 
 1. [Stickler Thief DP](https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/0/?track=amazon-arrays&batchId=192)
 2. [Product array puzzle](https://practice.geeksforgeeks.org/problems/product-array-puzzle4525/0/?track=amazon-arrays&batchId=192)
@@ -39,7 +39,9 @@
 
 ## Day4
 
-[** Optimizing techniques](Day4/optimization.txt)
+### How to Optimize brute force Solution
+
+[Optimizing techniques](Day4/optimizatons.txt)
 
 
 
