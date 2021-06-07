@@ -1,0 +1,196 @@
+optimisation technique 1/5: BUD**********************************
+Bottlenecks
+Unnecessary work
+Duplicated work
+
+#Bottlenecks:--
+something that's slow down your algorithm.
+
+there are 2 type of bottleneck you might encountry while working on optimisation.
+
+1.one time bottleneck: -->
+ex. you have a big array and you need to find an element from the array.and you are sorting the array in advance for searching.
+so sorting algorith is bottleneck here.the sorting algo t.c. of (nlgon). so if you want to optimimise it will be first to look up.
+
+2.A check of repretitive work:-->
+for example you are scanning the array and doing some computatin as you scan.
+so bottleneck is now to repretitive computation.
+
+e.x. given an array of distince integers, count the number of pairs of integers tht have the difference , k.
+{1, 7, 5, 9, 2, 12, 3} and k=2; the result (1,3), (3,5), (5,7), (7,9).
+
+sol:
+
+     --approach1
+      -brute force solution is to go through the array , starting from the first element, then search through the remaining elements.for each pair compute the difference and if it si equal to k,increase the counter of difference.
+      -t.c. o(n^2) s.c. o(1)
+     
+     --approach2
+      -optimization of brute force.
+      -bottleneck here is traversing theother side of the array. 
+      -we actually know what the other side is. if we have (x,?). the other side must be x+k or x-k.
+      -if you sort the array ,then it now become bineary search.
+      -t.c. o(nlogn) s.c. o(1)
+   
+     --approach 3
+      -if we want to optimize further, we can not use the sorting anymore.
+      -solution here is to use hash table.
+      -throw evverything into hash table and look up for x+k and x-k.
+      -t.c. o(n) s.c. o(n)
+
+
+#Unnecessary Work
+wondering what to do after brute force. sometimes, it is a matter of re-phrasing the solution. 
+
+e.x print all positive integger solutions to the equation, a^2+b^2=c^2+d^2. where a,b,c and d are integers between 1 and 1000.
+
+sol:
+       --approach1
+        -brute force using four nexted for loops
+        -t.c. o(n^4)
+       
+       --approach 2
+        -rewriting the equation
+        -a^2+b^2=c^2+d^2
+        -d=sqrt(a^2+b^2-c^2)
+        -t.c. o(n^3)
+
+
+#Duplicated Work
+let's use the same problem and brute force algo as above.we will look for duplicate work.
+the algo make use of hash Table with c^2+d^2 as key {c,d} pair as value.
+
+      --approach 3
+       - t.c. o(n^2) s.c. o(n)
+
+
+Optimisation Technique 2/5: DIY (Do it your self)********************************************************************
+
+when you get a question , try just woring it through intutively on a real example. often a bigger example will be easier.
+
+
+here is an example
+given a smaller string s, and a bigger string b, design an algorithm to find all permutations of the shorter
+string within the longer one.print the location of each permutation.
+
+sol:
+
+      --approach1
+       -brute force generate all permutations of s and then look for each in b.
+       -t.c. o(S!*B) time, where S is the length of s and B is the length of b.
+
+let's forget everything here and try this.
+
+s:abbc
+b:cbabadcbbabbcbabaabccbabc
+
+ (cbab)   (abbc)      (cbab)
+      (cbba)(bcba)    (babc)
+           (cbab)
+
+how did we do it? we eigher do it in
+1.walk through b and look at sliding windows of 4 characters(since s has length 4). check if each window is the permutation of s.
+
+t.c. o(B*s), O(B*slogs) or o(B*S^2) depeding upon exact question. which is lot better than o(s!*b).
+
+Optimisation Technique 3/5: simply & generalize*****************************************************************
+first we simply use the constraint, such as data type.
+then we solve this simiplified version of the problem. once we got teh algorithm for this simplified version, then we try to adapt the same approach to more complex situation.
+
+ex. a ransom note can be formed by cutting words out from a magazine to from a new sentence.how do you figure out if a random note (represented as a string0 can be formed from a given magazine (string) ?
+
+the simple version of prolbem, instead of string, we assume that we are cutting characters out of the magazine. now, it seems easier. we can construct a table of characters and its count number from the random note.
+next we go through the magazine and determine if all characters that we need for the ransom.
+
+
+when we generalize the algorithm, we do a very similar thing. instead of creating an array with character count, we create a hah table that maps from a word to its frequency.
+
+Optimisation Technique 4/5: make a base and step up**************************************************************
+with base case technique, we solve the problem base scenario first (e.g. n=1) and try to build up from there.
+when we try to solve more complex or interesting cases(i.e. n=3, n=4) , we try to use the knowledge or solution from our base cases.
+
+ex. design an algorithm to print all permutation of a string. for simplicity, assume all character are unique.
+consider test case , abcdefg,
+how do we get permutation (p)?
+
+p(a)         --> {a}
+p(ab)        --> {ab, ba}
+if we know the solution of p(ab) then how could we generate p(abc)? so we will put c in every possible points in p(ab)
+p(abc)       -->{ cab,acb,abc,cba,bca,bac}
+
+now we know the pattern , we can develop a general recursive algo for it.
+Optimisation Technique 5/5: Running Data Structure marathon***************************************
+
+this approach is basically running all the data structures one after another while evaluating its releancy for the given problem.
+
+e.x. numbers are randomly generated and stored into an expanding array. how would you keep track of the median?
+
+
+linked list--> probably not. linked list tends not to do well with accessing and sorting data.
+
+
+array --> maybe.the problem itself is an array do we need one more array? how do we keep it sorted? let's keep in view first.
+
+
+Binear tree--> this is much better.binary tree do fairly well with sorting if it si binear serach tree and it is balanced, then the top node is the median. but the numbers are even, then median is actually the average of top two nodes. both nodes can not be top at the same time.
+
+
+heap-->heap is really good at basic ordering and keeping of minimum and maximum.thisis interesint if you had two heaps.
+
+*************************************************************************************************
+Working towards best conceivable Runtime (BCR)
+
+BCR means the best runtime you can think of a solution to specific problem. you can easily prove that tere is no better way than bcr.
+
+for example, given two array sof a and b, we want to find number of elements that are in common we know taht in order to do that we will need to touch every single elements in a and b and hence the bcr will be o(A+B).
+
+given two sorted arrays, find the number of elements in common . the arrays are the same length and each has all distinct elements.
+
+
+sol: 
+
+   -- approach 1
+    - brute force start with each element in a and search for it in b. 
+    - for each element in A, we need to do a O(n) search in B.
+    - t.c. O(n^2)
+    -optimal algorithm:??
+    - BCR o(N)
+   
+   -- approach 2
+    -bineary search 
+    -second o(n) comes from searching. the array is sorted. can we search faster? of course, we can deploy bineary search that will improve our algorithm to o(logN)
+    -t.c. O(nlgon)
+    -optimal algorithm:??
+    -BCR o(N)
+
+   --approach 3
+    -can we do even better? doing better mean we need to redue o(logn) to o(1).
+    -in gerenal we can not serach an array(even sorted array) in better than o(logN) time
+    -in this case, we will throu everything from b to a hash table and it will take o(n) time.
+    -then we look up each element in the hash table . this will cost O(1) , so now our runtime is o(n)
+    -t.c. o(n) s.c. o(n)
+    -BCR o(N)
+
+   --approach 4
+    - any other improvement
+    - we already reached BCR in terms of runtime.
+    - but we can look at space complexity.
+    - it is given that the array is sorted. even with unsorted array , we can also achieve the same rutime.
+    - so clue must be in the sorted array.
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+

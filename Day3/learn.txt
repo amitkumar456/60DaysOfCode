@@ -1,0 +1,96 @@
+key learning points
+***************************************************************************
+1. Stickler Thief
+
+ --approach 1.
+   - using divide and conquer technique
+   - we can divide problem into two sub problem 
+   - we need to calculate mac(arr[i]+findmaxsum(arr,n,i+2),findmaxsum(arr,n,i+1))
+   - we are solving problem size < actual problem
+   -t.c. o(2^n) exponential t.c.
+
+ --approach 2.
+   -optimation of d & c algo i.e dp 
+   - we can see the overlapping subproblem
+   - so are using extra space dp[] to store value
+   - if the value we already calcualted we use directly
+   - t.c. o(n) s.c. o(n)
+   - bottom up approach
+ 
+ --approach 3.
+   -optimation of dp bottom up approach.
+   - we can observe dp table carefully 
+   - we are using top down approach
+   - dp[i]=max(arr[i]+dp[i+2],dp[i+1])
+   - finally returning dp[0]
+   -t.c. o(n) s.c. o(n) 
+ --approach 4.
+  -we are storing the result in the same array
+  -t.c. o(n) s.c. O(1)
+
+  -->>magic of dp t.c. o(2^n) to t.c. o(n) 
+*****************************************************************************
+2. Product array puzzle
+
+ --approach 1
+   -using division peroperty(given that you can not use division operation)
+   -we can calculate product of all array element
+   -then we just divide the product by a[i] element
+   -t.c. o(n) s.c. o(1)
+
+ --approach 2
+   -using prefix and suffix array to store (product of left array till prev index and product of right array till next index)
+   -finally just multiply prefix[i] and suffix[i] and store them into a[i]
+   -t.c. o(n) s.c. o(n)
+ 
+ --approach 3
+   -little bit optimization of approach 3 
+   -we are created two space in previous approach in this we only create one space
+   -we are storing prefix multiplication in extra space
+   -then we are storing suffix multiplicatin in extra space
+   -t.c. o(n) s.c. o(n)
+
+ --approach 4
+  -using the property of log  ,x=a*b*c*d
+  -then log(x)=log(a)+log(b)+log(c)+log(d)
+  -then we are taking anti log i.e. pow(10.00,log(x)-log(arr[i])) to calculate sum
+  -t.c. o(n) s.c. o(1)
+  -but this technique is not applicable if array contain 0
+ 
+ --approach 5
+  -using the pow function
+  -basically first calculating product of all term
+  -then doing pow(arr[i],-1)*product
+  -t.c. o(n) s.c. o(1)
+*******************************************************************
+3.(Review) Maximum index
+
+ --approach 1
+  -brute force i.e run two loops. in the outer loop pick elemetns one by one from the left 
+  -in the inner loop, compare the picked element with the elements starting from the right side
+  -keep updateing j-i 
+  -t.c. o(n^2) s.c. o(1)
+
+  --approach 2
+   -improving brute force and looking for BUD
+   -bottle neck here is here loop(i.c. slowing down our algo).
+   -one observation show that we are looking to find first greatest element graversing fro the end of the array to current index.
+   -we can actually keep track of maximum number moving formt he end to the start of the array.
+   -we can use bineary search instead of inner loop to finding just (>=) value
+   -t.c. o(nlogn) s.c. o(n)
+
+  --approach 3
+   -using hashing and sorting 
+   -for j consider the last index form the list of possible index of element and for i consider the first index fomr the list.
+   -t.c. o(nlogn) s.c. o(n)
+
+  --approach 4
+   -efficient solution
+   -bottleneck in prev is we are using sorting
+   -one observation is for an element arr[i], we do not need to consider arr[i] for left index if there is an element smaller than arr[i] on left side,
+   -similarly ,if there is a greater element on right side of arr[j] then we do not need to consider this j for right index.
+   -construct LMin[] and RMax[] such that LMin[i] holds the smallest element on left side or arr[i] including arr[i]
+   -construct RMax[j] holds the greatest element on right side of arr[j] includig arr[j].
+   -finally comare Lmin[i] with RMax[i]
+   -t.c. o(N) s.c o(N)
+
