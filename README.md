@@ -37,6 +37,9 @@
 
 [learning](Day3/learn.txt)
 
+## Day4
+
+[** Optimizing techniques](Day4/optimization.txt)
 
 
 
