@@ -1,0 +1,45 @@
+************************************************
+1. Subarray with given sum
+
+  --approach 1
+   -brute force approach i.e. we use 2 for loops outer loop for starting element and inner loop for continous sum
+   -if we hit sum is equal to given sum s then we will return the given index
+   -t.c. o(n^2) s.c. o(n)
+   
+  --approach 2
+   -using sliding window technique
+   -but this will work only if element are poistives
+   -if a subarray has sum greater than the given sum then there is no possibility that adding element to subarray will be x (given sum)
+   -start with an empty subarray, add elements to the subarray until the sum is less than x.if the sum is greater than x, remove elements from the start of the current subarray.
+   -t.c. o(n) s.c. O(1)
+
+   what happen if negative elements are present??
+
+   --approach 3
+    -using hashing technique
+    -idea is to store the sum of elements of every prefix of the array in hashmap.
+    -for every index i/ and sum up to that index as X.
+    - we check if prefix with a sum equal to x-s , then the subarray with the given sum is found
+    - t.c. o(n) s.c. o(N)
+  contain negative element and want constant time
+
+  --approach 4
+   -the idea is to modify the array to contain only positive elements
+   -find the smallest negative element in the array and increase every value in the array by the absolute value of the samllest negative element found.
+   - we may notice after doing the above modification , the sum of every subarray will also increase by
+   -(number of elements in the subarray)*(absolute value of min element)
+   -now we can use sliding window technique
+   -t.c. o(n) s.c. o(1)
+************************************************************************
+2. kadane's algorithm
+
+ --approach 1
+  -use brute force i.e. use 2 for loop outer loop for picking element and inner loop for creating all subarray containing that element
+  -then check sum of all element
+  -t.c. o(n^2) s.c. o(1)
+
+ --kadane's algorithm
+  -use following relation
+  -sum_current=max(arr[i]+sum_current, arr[i])
+  -and check condition sum_current < sum_global
+  -t.c. o(n) s.c. o(1)
