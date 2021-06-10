@@ -43,5 +43,14 @@
 
 [Optimizing techniques](Day4/optimizatons.txt)
 
+### Problem Solved
+
+1. [Subarray with given sum](https://practice.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1/?track=amazon-arrays&batchId=192)
+2. [Kadane's Algorithm](https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/0/?track=amazon-arrays&batchId=192)
+
+
+
+[learning](Day4/learn.txt)
+
 
 
