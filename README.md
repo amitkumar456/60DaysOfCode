@@ -57,10 +57,10 @@
 
 ### Implementation of Linked List
 
-1.[Single Linked List](Day5/Sll.cpp)
-2.[Circular Single Linked List](Day5/Csll.cpp)
-3.[Double Linked List](Day5/Dll.cpp)
-4.[Circular Double Linked List](Day5/Cdll.cpp)
+1. [Single Linked List](Day5/Sll.cpp)
+2. [Circular Single Linked List](Day5/Csll.cpp)
+3. [Double Linked List](Day5/Dll.cpp)
+4. [Circular Double Linked List](Day5/Cdll.cpp)
 
 
 
