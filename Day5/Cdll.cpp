@@ -1,7 +1,7 @@
 /*=============================================================================
 #  Author:             amit meena
 #  FileName:           index.cpp
-#  Description:        Circular Single Linked LIst Implementation
+#  Description:        Circular Double Linked LIst Implementation
 =============================================================================*/
 #include <iostream>
 using namespace std;
@@ -10,47 +10,47 @@ struct node
 {
     int data;
     node *next;
+    node *prev;
 };
 
-class CSLL{
+class CDLL{
 
 private:
     node *head, *tail;
     int size;
 
 public:
-    CSLL()
+    CDLL()
     {
         head = NULL;
         tail = NULL;
         size = 0;
     }
 
-    void createCsll(int value);
-    void insertInCsll(int value, int location);
-    void traversalInCsll();
+    void createCDLL(int value);
+    void insertInCDLL(int value, int location);
+    void traversalInCDLL();
     void deleteNode(int location);
-    void deleteCsll();
+    void deleteCDLL();
     void searchNode(int value);
 };
 
-void CSLL::createCsll(int value)
+void CDLL::createCDLL(int value)
 {
     node *tmp = new node();
     tmp->data = value;
-    tmp->next = NULL;
+    tmp->next = tmp;
+    tmp->prev=  tmp;
     head = tmp;
     tail = tmp;
-    tmp->next=head;
     size++;
 }
 
-void CSLL::insertInCsll(int value, int location)
+void CDLL::insertInCDLL(int value, int location)
 {
 
     node *tmp = new node();
     tmp->data = value;
-    tmp->next = NULL;
     if (head == NULL)
     {
         cout << "This is empty linked list. " << endl;
@@ -60,14 +60,18 @@ void CSLL::insertInCsll(int value, int location)
     else if (location == 0)
     {
         tmp->next = head;
-        head = tmp;
+        head->prev=tmp;
         tail->next=tmp;
+        tmp->prev=tail;
+        head = tmp;
     }
     else if (location == size+1)
     {
         tail->next = tmp;
-        tail = tmp;
+        tmp->prev=tail;
         tmp->next=head;
+        tail= tmp;
+        head->prev=tail;
     }
     else
     {
@@ -79,12 +83,14 @@ void CSLL::insertInCsll(int value, int location)
             i++;
         }
         tmp->next = temp->next;
+        temp->next->prev=tmp;
+        tmp->prev=temp;
         temp->next = tmp;
     }
     size++;
 }
 
-void CSLL::traversalInCsll()
+void CDLL::traversalInCDLL()
 {
     if (head == NULL){
         cout<<"this is empty linked list."<<endl;
@@ -101,7 +107,7 @@ void CSLL::traversalInCsll()
     cout<<"NULL"<<endl;
 }
 
-void CSLL::searchNode(int value)
+void CDLL::searchNode(int value)
 {
     if (head == NULL)
         return;
@@ -114,20 +120,24 @@ void CSLL::searchNode(int value)
             cout << tmp->data;
             return;
         }
-        tmp=tmp->next;
         i++;
     }
 }
-void CSLL::deleteNode(int location)
+void CDLL::deleteNode(int location)
 {
     if (head == NULL)
     return;
     else if (location == 0)
     {
-        head = head->next;
-        tail->next=head;
-        if (size == 1)
-            tail = NULL;
+        head=head->next;
+        head->prev=tail;
+        tail=head;
+        if (size == 1){
+        head->next=NULL;
+        head->prev=NULL;
+        tail=NULL;
+        head=NULL;
+        }
     }
     else if (location == size)
     {
@@ -137,12 +147,13 @@ void CSLL::deleteNode(int location)
         {   i++;
             temp = temp->next;
         }
-        temp->next = head;
+        temp->next =head;
         tail = temp;
         if (size == 1)
-        {   temp->next=NULL;
-            head = NULL;
+        {   head->next=NULL;
+            head->prev=NULL;
             tail=NULL;
+            head = NULL;
         }
     }
     else
@@ -154,12 +165,20 @@ void CSLL::deleteNode(int location)
             temp = temp->next;
         }
         temp->next = temp->next->next;
+        temp->next->next->prev=temp;
     }
     size--;
 }
-void CSLL::deleteCsll()
+void CDLL::deleteCDLL()
 {
+ 
+    node *temp=head;
     tail->next=NULL;
+    head->prev=NULL;
+    while(temp!=NULL){
+        temp->prev=NULL;
+        temp=temp->next;
+    }
     head = NULL;
     tail = NULL;
     size = 0;
@@ -167,42 +186,42 @@ void CSLL::deleteCsll()
 
 int main()
 {
-    CSLL li;
+    CDLL li;
 
-    li.traversalInCsll();
+    li.traversalInCDLL();
 
-    li.createCsll(25);
-    li.insertInCsll(36, 0);
-    li.insertInCsll(49, 0);
-    li.insertInCsll(64, 0);
+    li.createCDLL(25);
+    li.insertInCDLL(36, 0);
+    li.insertInCDLL(49, 0);
+    li.insertInCDLL(64, 0);
 
     cout << "After adding in the first of linked list" << endl;
 
-    li.traversalInCsll();
+    li.traversalInCDLL();
 
     cout<<endl;
     
     cout<< "After adding in the end of linked list" <<endl;
-    li.insertInCsll(25,5);
-    li.insertInCsll(36,6);
-    li.insertInCsll(49,7);
-    li.insertInCsll(64,8);
+    li.insertInCDLL(25,5);
+    li.insertInCDLL(36,6);
+    li.insertInCDLL(49,7);
+    li.insertInCDLL(64,8);
 
-    li.traversalInCsll();
+    li.traversalInCDLL();
 
     cout<<endl;
 
     cout<<"linked list after adding 10 after node that has data =49 "<<endl;
-    li.insertInCsll(49,7);
-    li.traversalInCsll();
+    li.insertInCDLL(49,7);
+    li.traversalInCDLL();
 
     li.deleteNode(5);
-    li.traversalInCsll();
+    li.traversalInCDLL();
 
 
     for(int i=0;i<3;i++){
          li.deleteNode(0);
-         li.traversalInCsll();
+         li.traversalInCDLL();
     }
 
     return 0;
