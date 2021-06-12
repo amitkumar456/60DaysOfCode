@@ -1,0 +1,19 @@
+************************************************
+1. Linked List Cycle [141]
+
+  --approach 1
+   -using slow pointer and fast pointer 
+   -slow is moving 1 step next and fast is moving 2 step next
+   -if ll contain cycle then slow must meet fast
+   -t.c. o(n) s.c. o(1)
+
+************************************************
+2. merge two Sorted Lists [21]
+
+  --approach 2
+   -compare both the element of the List
+   -create a new head and append small element.
+   -t.c. o(n) s.c. o(1)
+
+
+************************************************
