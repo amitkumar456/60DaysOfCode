@@ -71,5 +71,5 @@
 2. [merge two Sorted Lists [21]](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 
-[learning](Day6/learn.txt)
+[learning](day6/learn.txt)
 
