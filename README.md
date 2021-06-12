@@ -63,4 +63,13 @@
 4. [Circular Double Linked List](Day5/Cdll.cpp)
 
 
+## Day6
+
+### Problem Solved
+
+1. [Linked List Cycle [141]](https://leetcode.com/problems/linked-list-cycle/)
+2. [merge two Sorted Lists [21]](https://leetcode.com/problems/merge-two-sorted-lists/)
+
+
+[learning](Day6/learn.txt)
 
