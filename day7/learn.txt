@@ -1,0 +1,61 @@
+****************************************************
+1. Finding middle eleent in a linked list
+  --approach 1
+   - traverse the whole linked list and count the no. of nodes.
+   - now traverse the list again till cuont/2 and return the node at count/2
+   -t.c. o(N) s.c. o(1)
+
+  --approach 2
+   -traverse linked list using two pointer.
+   -move one pointer by one and the other pointer by two when fast pointer reaches the end
+   -return slow pointer value
+   -t.c. o(N) s.c. o(1)
+*****************************************************
+2. Delete middle of linked list
+
+  --approach 1
+   - same as the q1 we have to first calculate size of ll
+   - then travers one element before the ll
+   - t.c. o(n) s.c. o(1)
+
+  --approach 2
+   - two pointer algorithm
+   - we use prev pointer to store reference of prev slow pointer.
+   - t.c. o(n) s.c. o(1)
+
+*****************************************************
+3. insert in sorted linked list
+ 
+  --approach 1
+   -if ll is empty then we will create a node and head will point to it.
+   -if value of key given is greater than head value than we will traverse till we find the appropiate position
+   -we will use prev to store address of element just smaller than given key
+   - t.c. o(N) s.c. o(1)
+
+******************************************************
+4. Reverse the linked list
+ 
+  --approach 1
+   -initilize the new linked list by first element of given ll
+   -the iterate through the given list and add element at head of new ll
+   -t.c. o(n) s.c. o(1)
+
+  --approach 2
+   -use three pointer prev=NULL, curr=head, next=NULL.
+   -do following steps
+   -next=curr->next;
+   -curr->next=prev
+   -pre=cur
+   -curr=next
+   -t.c. o(N) s.c. o(1)
+
+  --approach 3
+   -using recursive algorithm
+   -divide the algo into first and rest
+   -then call reverse on rest of ll
+   -link rest to first
+   -fix head pointer
+   -t.c. o(n) s.c. o(1)
+**********************************************************
+6. Pairwise swap elements of a linked list
+
