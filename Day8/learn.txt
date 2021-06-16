@@ -1,0 +1,81 @@
+****************************************************************
+1. Two Sum [leet code #1]
+  --approach 1
+   -brute force solution using all pair and checking sum is equal to target sum
+   -t.c. o(n) s.c. o(n)
+
+  --approach 2
+   -we can apply bud optimization here
+   -for every element we are checking entire length
+   -we can sort the array and use binary search to do that
+   -t.c. o(nlogn) s.c. o(logn)
+  --approach 3
+   -we can apply two pointer algo here
+   -t.c. o(nlogn) s.c. o(logn)
+
+  --approach 4
+   -we can apply hashing here
+   -t.c. o(n) s.c. o(1)
+****************************************************************
+2. Determine Whether Matrix Can Be obtained By Rotation [leet code #]
+
+  --approach 1
+   -brute force solution 
+   -we rotate an 2d matrix first taking it transpose than reverse the row.
+   -for each rotation we calculating the rotation matrix and comparing with target matrix
+   -t.c. o(n^2) s.c. o(n)
+
+   --approach 2
+    -using rotation index poroperty
+    -Suppose we are at index i, j let's find relation of this position with various rotation
+
+    (I,j) --> (i,j) rotate 0°
+
+    (I,j)--> (n-j-1,I) rotate 90°
+
+    (I,j)--> (n-j-1,n-i-1) rotate 180°
+
+    (I,j)--> (j, n-1-I) rotate 270°
+
+    -t.c. o(n^2) s.c. o(1)
+
+
+
+    ****one important conpect
+    -how to rotate a matrix by 90 inplace
+     -first find transpose i.e.
+     for i in 0 t0 n;
+      for j in i to n;
+      swap(arr[i][j],arr[j][i])
+
+     -then rotate the entire column
+      for i in 0 to C;
+       for j=0,k=R-1; j<k;j++,k--;
+       swap(arr[j][i],arr[k][j])
+
+*****************************************************************
+3. Subarray with given sum equals k [leetcode #560]
+
+  --approach 1
+   -brute force solution find all possible subarray and check sum==target sum
+   -t.c. o(n) s.c. o(1)
+  --approach 2
+   -sliding window technique
+   -t.c. o(n) s.c. o(1) but not valid for negative numbers;
+  --approach 3
+   -we can find minimum element in array and can add to all value
+   -then we can just apply approach 2 with target sum=given sum+ abs(minEle)
+   -t.c. o(n) s.c. o(1)
+
+  --approach 4
+   -using hashmap(store prefix sum)
+   -sum(i,m)=sum(0,j)-sum(0,i) poroperty
+   -if we find curr_sum-k in given hash table we add it.
+   -t.c. o(n) s.c. o(n)
+
+
+
+
+****************************************************************
+4. Number of Submatrices That Sum to Target [leetcode #1074]
+
