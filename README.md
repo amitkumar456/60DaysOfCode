@@ -101,9 +101,9 @@
 
 ## Day 9
 
-### Implementation
+### Implementation of stack and queue
 
-1. [Stack](Day9/stack)
-2. [Queue](Day9/queue)
+1. [Stack](day9/stack)
+2. [Queue](day9/queue)
 
 
