@@ -73,3 +73,15 @@
 
 [learning](day6/learn.txt)
 
+
+## Day 7
+
+### Problem Solved
+
+1. [Finding middle element in a linked list](https://practice.geeksforgeeks.org/problems/finding-middle-element-in-a-linked-list/1/?track=amazon-linkedlists&batchId=192)
+2. [Delete Middle of Linked List](https://practice.geeksforgeeks.org/problems/delete-middle-of-linked-list/0/?track=amazon-linkedlists&batchId=192)
+3. [Insert in a Sorted List](https://practice.geeksforgeeks.org/problems/insert-in-a-sorted-list/0/?track=amazon-linkedlists&batchId=192)
+4. [Reverse a linked list](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/0/?track=amazon-linkedlists&batchId=192)
+
+
+[learning](day7/learn.txt)
