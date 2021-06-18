@@ -96,14 +96,14 @@
 3. [Subarray Sum Equals K [leetcode #560]](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 
-[learning](day8/learn.txt)
+[learning](Day8/learn.txt)
 
 
 ## Day 9
 
 ### Implementation
 
-1. [Stack](Day9/Stack)
-2. [Queue](Day9/Queue)
+1. [Stack](Day9/stack)
+2. [Queue](Day9/queue)
 
 
