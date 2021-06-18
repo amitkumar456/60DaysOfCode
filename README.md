@@ -85,3 +85,25 @@
 
 
 [learning](day7/learn.txt)
+
+
+## Day 8
+
+### Problem Solved
+
+1. [Determine Whether Matrix Can Be Obtained By Rotation[leetcode #1886]](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation)
+2. [two sum [leetcode #1]](https://leetcode.com/problems/two-sum/)
+3. [Subarray Sum Equals K [leetcode #560]](https://leetcode.com/problems/subarray-sum-equals-k/)
+
+
+[learning](day8/learn.txt)
+
+
+## Day 9
+
+### Implementation
+
+1. [Stack](Day9/Stack)
+2. [Queue](Day9/Queue)
+
+
