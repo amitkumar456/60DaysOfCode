@@ -2,17 +2,17 @@
  #################################################
  general tips
  1. avoid using the submit button
-    atleast  read code once before submit.
-    atleast do dryruns onces for few test cases before submit.
+    atleast  read code once before submiting.
+    atleast do dry runs onces for few test cases before submit.
  
 
  2. newton's first law
-    most of lack is consitancy. if body is at rest then it will be rest. if it's motion it will be motion
+    most of lack is consitancy. if body is at rest then it will at rest. if it's motion it will be in motion.
     consistancy is key. solving 1 question weekly is far greater than solving 7 question on one day.
 
-3. weekyly contests is great way to learn
+3. weekyly contests is great way to learn[upsolving is important]
 
-4. solve problems that have good reviews 4[likes]:1[dislike] ratio better.
+4. solve problems that have good reviews 4[likes] : 1[dislike] ratio better.
  ###############################################
  strategy
 
@@ -29,10 +29,16 @@
  6. spend the next 10 minutes studying the solution.
 
  7. stop even if you're in the middle of something importakt like trying to understand the soution.
-   do not spend more than 30-35 minutes per question
+    do not spend more than 30-35 minutes per question.
 
-8. record your activity on your progress chart[excel sheet]
+ 8. record your activity on your progress chart[excel sheet]
 
-9. revisit the question next week[do follow same process]
+ 9. revisit the question next week[question that you stuck in first attempt].
 
+###############################################
+ Final most important tip
+ It's never too late to start DSA. Don't compare yourself with someone who solving problem from 2-3 years.
+ if you specifically targetting tech company interview then compitive programming helps[ cp can be treated
+ as superset for all dsa required for tech interview]. you will learn thing while you progress.To master 
+ Dp you need to solve 100-200 problems[topic of dp is very vast ]. 
 
