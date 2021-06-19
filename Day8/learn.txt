@@ -1,14 +1,14 @@
 ****************************************************************
 1. Two Sum [leet code #1]
   --approach 1
-   -brute force solution using all pair and checking sum is equal to target sum
-   -t.c. o(n) s.c. o(n)
+   -brute force solution finding all pair and checking sum is equal to target sum
+   -t.c. o(n^2) s.c. o(1)
 
   --approach 2
    -we can apply bud optimization here
    -for every element we are checking entire length
    -we can sort the array and use binary search to do that
-   -t.c. o(nlogn) s.c. o(logn)
+   -t.c. o(nlogn) s.c. o(logn)[sorting space!!!]
   --approach 3
    -we can apply two pointer algo here
    -t.c. o(nlogn) s.c. o(logn)
@@ -73,9 +73,4 @@
    -if we find curr_sum-k in given hash table we add it.
    -t.c. o(n) s.c. o(n)
 
-
-
-
-****************************************************************
-4. Number of Submatrices That Sum to Target [leetcode #1074]
 
