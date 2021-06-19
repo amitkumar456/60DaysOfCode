@@ -107,3 +107,12 @@
 2. [Queue](day9/queue)
 
 
+## Day 10
+
+### Implementation of Binary Tree and Binary Search Tree
+
+1. [Binary Tree](day10/binary tree)
+2. [Binary Search Tree](day10/binary search tree)
+
+
+
