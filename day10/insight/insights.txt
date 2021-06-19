@@ -1,0 +1,38 @@
+
+ #################################################
+ general tips
+ 1. avoid using the submit button
+    atleast  read code once before submit.
+    atleast do dryruns onces for few test cases before submit.
+ 
+
+ 2. newton's first law
+    most of lack is consitancy. if body is at rest then it will be rest. if it's motion it will be motion
+    consistancy is key. solving 1 question weekly is far greater than solving 7 question on one day.
+
+3. weekyly contests is great way to learn
+
+4. solve problems that have good reviews 4[likes]:1[dislike] ratio better.
+ ###############################################
+ strategy
+
+ 1. go to a quiet location
+
+ 2. pick a question
+
+ 3. set a timer for 25 minutes
+
+ 4. allocate the first 5 minute to understand to problem(ask / answer clarifying question)
+
+ 5. spend the next 20 minutes solving the problem on pen paper
+
+ 6. spend the next 10 minutes studying the solution.
+
+ 7. stop even if you're in the middle of something importakt like trying to understand the soution.
+   do not spend more than 30-35 minutes per question
+
+8. record your activity on your progress chart[excel sheet]
+
+9. revisit the question next week[do follow same process]
+
+
