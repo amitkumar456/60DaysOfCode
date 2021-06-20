@@ -122,12 +122,12 @@
 
 ### Implementation of AVL Tree and Binary Heap
 
-1. [AVL Tree](day11/AVL_tree)
-2. [Binary Heap](day11/Binary_heap)
+1. [AVL Tree](https://github.com/amitkumar456/60DaysOfCode/tree/main/Day11/AVL_tree)
+2. [Binary Heap](https://github.com/amitkumar456/60DaysOfCode/tree/main/Day11/Binary_heap)
 
 ### Implementation of all Sorting algorithms
 
-1. [Sorting](day11/Sorting)
+1. [Sorting](https://github.com/amitkumar456/60DaysOfCode/tree/main/Day11/Sorting)
 
 
 
