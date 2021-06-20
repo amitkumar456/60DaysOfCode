@@ -115,7 +115,7 @@
 2. [Binary Search Tree](https://github.com/amitkumar456/60DaysOfCode/tree/main/day10)
 
 
-[How to use Leetcode effectively](day10/insights.txt)
+[How to use Leetcode effectively](https://github.com/amitkumar456/60DaysOfCode/tree/main/day10/insight)
 
 
 
