@@ -118,4 +118,19 @@
 [How to use Leetcode effectively](https://github.com/amitkumar456/60DaysOfCode/tree/main/day10/insight)
 
 
+## Day 11
+
+### Implementation of AVL Tree and Binary Heap
+
+1. [AVL Tree](https://github.com/amitkumar456/60DaysOfCode/tree/main/Day11/AVL_tree)
+2. [Binary Heap](https://github.com/amitkumar456/60DaysOfCode/tree/main/Day11/Binary_heap)
+
+### Implementation of all Sorting algorithms
+
+1. [Sorting](https://github.com/amitkumar456/60DaysOfCode/tree/main/Day11/Sorting)
+
+
+
+
+
 
