@@ -1,0 +1,9 @@
+# number of way of a[i]!=a[j] for i!=j
+find total pairs i.e. nc2 and minus all pair s.t.c a[i]==a[j];
+
+this can be done in 2 ways
+1. use the sorting and find the frequency of element and then minus all the similar pairs
+2. use map and for every element minux (n- freq[arr[i]]).
+
+t.c. o(nlogn) s.c. o(n)
+t.c. o(n) s.c. o(n)
