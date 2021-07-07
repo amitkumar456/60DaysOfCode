@@ -34,11 +34,8 @@ int bfs(int src){
         q.push(i);
         vis[i]=1;
         dist[i]=dist[x]+1;
-        }
-         
-    }
-    
-    
+        }         
+    }    
     }
 ll co=max_element(dist,dist+500001)-dist;
 ans=dist[co];
